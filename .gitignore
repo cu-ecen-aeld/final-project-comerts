@@ -1,4 +1,5 @@
 build
+build-pi
 .vscode
 valgrind-out.txt
 test.sh.log
