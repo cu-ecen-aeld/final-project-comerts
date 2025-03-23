@@ -30,7 +30,6 @@ S = "${WORKDIR}/log-proxy"
 # that the appropriate arguments are passed in.
 FILES:${PN} += "${bindir}/log-proxy"
 FILES:${PN} += "${sysconfdir}/rcS.d/S98logproxy"
-FILES:${PN} += "${sysconfdir}/wpa_supplicant.conf"
 
 TARGET_LDFLAGS += "-pthread -lrt"
 TARGET_CFLAGS += "-Werror -Wall -Wextra -Wno-format-truncation -D_REENTRANT -DDEBUG"
@@ -67,8 +66,5 @@ do_install () {
 
 	install -d ${D}${sysconfdir}/rcS.d
 	install -m 0755 ${S}/log-proxy-start-stop ${D}${sysconfdir}/rcS.d/S98logproxy
-
-	install -d ${D}${sysconfdir}
-	install -m 0655 ${THISDIR}/files/wpa_supplicant.conf ${D}${sysconfdir}/
 }
 
