@@ -1,7 +1,6 @@
 inherit core-image
 CORE_IMAGE_EXTRA_INSTALL += "log-proxy"
 CORE_IMAGE_EXTRA_INSTALL += "log-client"
-CORE_IMAGE_EXTRA_INSTALL += "wifi"
 CORE_IMAGE_EXTRA_INSTALL += "openssh"
 IMAGE_INSTALL:append = " wireless-regdb-static"
 WIRELESS_REGDOM = "TR"
